@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <locale.h>
 
 int calculateIncome() {
 	float a = 7.99; // стоимость первых газет
@@ -14,6 +15,8 @@ int calculateIncome() {
 }
 
 void main() {
+	setlocale(LC_CTYPE, "RUS");
+
 	float result = calculateIncome();
 
 	printf("%-10.2f", result);
